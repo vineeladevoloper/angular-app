@@ -1,0 +1,32 @@
+<nav class="navbar">
+    <div class="container">
+        <a class="navbar-brand" href="#">Your Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/about">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contact">CONTACT</a>
+                </li>
+                <!-- Add icons to the right side -->
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Router Outlet to load routed components -->
+<router-outlet></router-outlet>

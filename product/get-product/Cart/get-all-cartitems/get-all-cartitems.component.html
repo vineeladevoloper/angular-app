@@ -1,0 +1,29 @@
+<h3>User Cart</h3>
+<div class="container">
+    <div *ngIf="successMessage" class="alert alert-success">
+        {{ successMessage }}
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p><b>Total Items In Cart ({{ rowcount }})</b></p>
+            <p><b>Total Price: {{ gtotal | currency }}</b></p>
+        </div>
+    </div>
+    <div class="row">
+        <div *ngFor="let product of carts1" class="col-lg-6 mb-4">
+            <!-- Single Card for Product -->
+            <div class="card product-card">
+                <img *ngIf="product.imageUrl" [src]="createImgPath(product.imageUrl)" alt="Product Image"
+                    class="card-img-top custom-image">
+                <div class="card-body">
+                    <h5 class="card-title">{{ 'Name: ' + product.name }}</h5>
+                    <p *ngIf="product.description" class="card-text">{{ 'Description: ' + product.description }}</p>
+                    <p class="card-text">{{ 'Price: ' + product.price }}</p>
+                    <p class="card-text">{{ 'Email: ' + product.productEmail }}</p>
+                    <p class="card-text">{{ 'Quantity: ' + product.quantity }}</p>
+                    <button class="btn btn-link" (click)="deleteCartItem(product.id)">Remove From Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

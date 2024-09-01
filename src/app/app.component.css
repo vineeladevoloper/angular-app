@@ -1,0 +1,98 @@
+/* Navbar container */
+.navbar {
+    background-color: #4f4cafe9; /* Nice green color */
+    padding: 10px 20px; /* Add more padding for a balanced look */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Brand logo or text */
+.navbar-brand {
+    color: #fff; /* Text color */
+    font-size: 24px; /* Font size */
+    text-decoration: none; /* No underline */
+    display: flex;
+    align-items: center; /* Align text with logo */
+}
+
+.navbar-brand img {
+    max-height: 30px; /* Logo height */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.navbar-brand:hover {
+    color: #fff; /* Hover color */
+}
+
+/* Toggler button */
+.navbar-toggler {
+    border: none; /* No border */
+    background: transparent; /* Transparent background */
+    color: #fff; /* Icon color */
+    font-size: 24px; /* Icon size */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.navbar-toggler:focus {
+    outline: none; /* No outline */
+}
+
+/* Navbar items */
+.navbar-nav {
+    list-style: none; /* No bullet points */
+    display: flex; /* Display items in a row */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.nav-item {
+    margin-left: 20px; /* Spacing between items */
+}
+
+.nav-link {
+    color: #fff; /* Link color */
+    text-decoration: none; /* No underline */
+    font-size: 18px; /* Font size */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-link:hover {
+    color: #d4d4ff; /* Hover color */
+}
+
+/* Cart icon style */
+.nav-item .fa-shopping-cart {
+    font-size: 20px; /* Cart icon size */
+    margin-right: 5px; /* Space between icon and text (if any) */
+}
+
+/* Media query for small screens */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        flex-direction: column; /* Stack items vertically */
+        margin-top: 10px; /* Space above stacked items */
+    }
+
+    .nav-item {
+        margin-left: 0; /* No margin for stacked items */
+        margin-bottom: 10px; /* Space below each item */
+    }
+
+    .nav-item:last-child {
+        margin-bottom: 0; /* No space below the last item */
+    }
+}
+
+/* Additional styles for better visuals */
+.navbar {
+    position: relative; /* Allow for absolute positioning of elements */
+    z-index: 1000; /* Ensure navbar stays on top */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.navbar.scrolled {
+    background-color: #3b3a8a; /* Darker background when scrolled */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Stronger shadow when scrolled */
+}

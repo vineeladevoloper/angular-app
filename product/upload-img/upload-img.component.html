@@ -1,0 +1,24 @@
+<!-- <div class="container">
+    <table class="table">
+        <tr>
+            <td>Enter Name</td>
+            <td>
+                <input type="text" name="" id="" [(ngModel)]="products.name">
+            </td>
+        </tr>
+    </table>
+</div> -->
+<div class="row" style="margin-bottom:15px;">
+    <div class="col-md-3">
+        <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files) " style="display:none;">
+        <button type="button" class="btn btn-success" (click)="file.click()">Upload File</button>
+    </div>
+    <div class="col-md-4"> 
+        <span class="upload" *ngIf="'progress>0'">
+            {{progress}} %
+        </span>
+        <span class="upload" *ngIf="message">
+            {{message}}
+        </span>
+    </div>
+</div>

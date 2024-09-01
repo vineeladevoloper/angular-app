@@ -1,0 +1,56 @@
+<div class="register-form">
+    <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()" autocomplete="on">
+
+        <div class="form-group">
+            <h5>Email</h5>
+            <input type="email" class="form-control" name="email" [(ngModel)]="login.email" required email
+                #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.errors }" autocomplete="email" />
+            <div *ngIf="f.submitted && email.errors" class="invalid-feedback">
+                <div *ngIf="email.errors['required']">Email is required</div>
+                <div *ngIf="email.errors['email']">Email is invalid</div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <h5>Password</h5>
+            <input type="password" class="form-control" name="password" [(ngModel)]="login.password" required
+                minlength="5" maxlength="40" #password="ngModel"
+                [ngClass]="{ 'is-invalid': f.submitted && password.errors }" autocomplete="current-password" />
+            <div *ngIf="f.submitted && password.errors" class="invalid-feedback">
+                <div *ngIf="password.errors['required']">Password is required</div>
+                <div *ngIf="password.errors['minlength']">
+                    Password must be at least 5 characters
+                </div>
+                <div *ngIf="password.errors['maxlength']">
+                    Password must not exceed 40 characters
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group captcha-container">
+            <h5 for="captcha" class="captcha-label">Captcha:</h5>
+            <div class="captcha">
+                <div class="captcha-code-container">
+                    <!-- <span class="strike-through"></span> -->
+                    <span class="captcha-code" id="captchaCode">{{ captchaCode }}</span>
+                    <!-- <span class="strike-through"></span> -->
+                </div>
+                <input type="text" class="form-control captcha-input" name="captcha" [(ngModel)]="userInput" required
+                    #captcha="ngModel" [ngClass]="{ 'is-invalid': f.submitted && captcha.errors }" autocomplete="off" />
+                <div *ngIf="f.submitted && captcha.errors" class="invalid-feedback">
+                    <div *ngIf="captcha.errors['required']">Captcha is required</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-danger">{{errMsg}}</div>
+       <div class="form-group ">
+            <button type="submit" class="btn btn-primary" [disabled]="isLoginButtonDisabled" [ngClass]="{'disabled-button': isLoginButtonDisabled}">Login</button>
+            <button type="button" (click)="onReset()" class="btn btn-warning float-right">
+                Reset
+            </button>
+        </div>
+    </form>
+    <p>If you are new user! Redirect to register page: <button class="btn btn-primary" (click)="redirectToRegister()">Register</button></p>
+</div>

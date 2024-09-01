@@ -1,0 +1,44 @@
+<div class="container-fluid">
+      <h3>Welcome {{user.userName}}!</h3>
+   
+      <div class="row">
+        <!-- Left Pane -->
+        <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="'profile/' + user.userId">View Profile</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="'getproduct/'">ViewallProdect</a>
+              </li> 
+              
+              <li class="nav-item">
+
+                <a class="nav-link" [routerLink]="'edituser/' + user.userId">Edit Profile</a>
+              </li>   
+
+              <li class="nav-item">
+
+                <a class="nav-link" [routerLink]="'get-all-cartitems/'">view Cart</a>
+              </li> 
+              <li class="nav-item">
+
+                <a class="nav-link" [routerLink]="'get-order-byid/'">view order</a>
+              </li> 
+
+              <li class="nav-item">
+                <a class="nav-link" (click)="logout()" href="">Log out</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+  
+        <!-- Right Pane -->
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+          <router-outlet></router-outlet>
+        </main>
+      </div>
+    
+  </div>
+  

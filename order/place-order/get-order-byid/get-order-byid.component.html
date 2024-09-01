@@ -1,0 +1,16 @@
+<div>
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <!-- Single Card for Order -->
+            <div class="card order-card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ 'Order ID: ' + order.id }}</h5>
+                    <p class="card-text">{{ 'Bill ID: ' + order.billId }}</p>
+                    <p class="card-text">{{ 'Order Status: ' + order.orderStatus }}</p>
+                    <button button class="btn btn-link" (click)="deleteOrd()">Cancel Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 

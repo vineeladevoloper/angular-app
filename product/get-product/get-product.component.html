@@ -1,0 +1,22 @@
+<div class="container">
+    <h2 class="mt-4 mb-4">Products List</h2>
+    <div class="search-container mb-4">
+      <input type="text" class="form-control search-bar" placeholder="Search by Name" [(ngModel)]="searchTerm" (input)="onSearch()"> 
+    </div>
+    <div class="row">
+      <div *ngFor="let product of products" class="col-lg-6 mb-4">
+        <!-- Single Card for Product -->
+        <div class="card product-card">
+          <img *ngIf="product.imageUrl" [src]="createImgPath(product.imageUrl)" alt="Product Image" class="card-img-top custom-image">
+          <div class="card-body">
+            <h5 class="card-title">{{ 'Name: ' + product.name }}</h5>
+            <p *ngIf="product.description" class="card-text">{{ 'Description: ' + product.description }}</p>
+            <p class="card-text">{{ 'Price: ' + product.price }}</p>
+            <p class="card-text">{{ 'Email: ' + product.productEmail }}</p>
+            <button button class="btn btn-link" (click)="viewProduct(product.id)">View Product</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

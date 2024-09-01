@@ -1,0 +1,24 @@
+<div class="product" id="post-container">
+    <img *ngIf="product.imageUrl" [src]="createImgPath(product.imageUrl)" alt="Product Image" class="custom-image"
+        id="post-image">
+    <p class="card-text" id="product-name"><strong>Name:</strong> {{ product.name }}</p>
+    <p class="card-text" id="product-description"><strong>Description:</strong> {{ product.description }}</p>
+    <p class="card-text" id="product-price"><strong>Price:</strong> {{ product.price | currency }}</p>
+    <p class="card-text" id="product-email"><strong>Contact Email:</strong> {{ product.productEmail }}</p>
+    <p class="card-text" id="product-category"><strong>Category ID:</strong> {{ product.categoryId }}</p>
+    <div *ngIf="role=='Admin'" class="form-group">
+        <button type="button" class="btn btn-primary" (click)="deleteProduct(product.id)">Delete</button>
+    </div>
+
+    <div *ngIf="role=='User'" class="form-group">
+        <label for="quantity">Quantity:</label>
+        <div>
+            <button (click)="decrementQuantity()">-</button>
+            <input type="number" id="quantity" [(ngModel)]="quantity" min="1">
+            <button (click)="incrementQuantity()">+</button>
+        </div>
+        <button type="button" class="btn btn-primary" (click)="addToCart(product.id)">Add to Cart</button>
+    </div>
+    
+</div>
+

@@ -1,0 +1,84 @@
+/* login.component.css */
+
+.register-form {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .invalid-feedback {
+    color: red;
+  }
+  
+  .captcha-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .captcha-label {
+    margin-right: 10px;
+  }
+  
+  .captcha {
+    display: flex;
+    align-items: center;
+  }
+  
+  .captcha-code-container {
+    border: 1px solid #cccccc;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .captcha-input {
+    flex: 1;
+  }
+  
+  .text-danger {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color: #ffb300;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #00b318;
+  }
+  
+  .btn-warning {
+    background-color: #ffc107;
+    color: #212529;
+  } 
+  
+  .btn-warning:hover {
+    background-color: #e0a800;
+  }
+  
+  .disabled-button {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  

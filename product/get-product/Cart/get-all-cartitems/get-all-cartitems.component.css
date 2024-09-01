@@ -1,0 +1,12 @@
+.product-card {
+    max-width: 300px; /* Adjust the maximum width of the card */
+    margin-bottom: 20px; /* Adjust the margin bottom as needed */
+}
+
+.custom-image {
+    max-width: 100%; /* Set the maximum width of the image to 100% of its container */
+    height: auto; /* Allow the height to adjust automatically to maintain aspect ratio */
+    border-width: 1px; /* Adjust the border width as needed */
+    border-style: solid; /* Set the border style */
+    border-color: #ccc; /* Set the border color */
+}

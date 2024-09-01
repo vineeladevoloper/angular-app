@@ -1,0 +1,31 @@
+/* Navbar Styles */
+.navbar {
+    margin-bottom: 20px; /* Add some space below the navbar */
+  }
+  
+  .navbar-brand {
+    font-size: 24px; /* Adjust font size of the brand */
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 18px; /* Adjust font size of the navbar links */
+  }
+  
+  /* Navbar Active Link Style */
+  .navbar-nav .nav-item.active .nav-link {
+    color: #ffc107; /* Change active link color */
+  }
+  
+  /* Navbar Hover Effect */
+  .navbar-nav .nav-link:hover {
+    color: #ffffff; /* Change link color on hover */
+  }
+  
+  /* Navbar Toggler Icon Color */
+  .navbar-toggler-icon {
+    color: #ffffff; /* Change color of the toggler icon */
+  }
+  .bg-primary {
+    background-color: #007bff; /* You can change the color code as per your preference */
+  }
+  
